@@ -1,0 +1,39 @@
+name: Pull Request
+
+on:
+  - pull_request
+
+jobs:
+  check-version-label:
+    name: Only one version label
+    runs-on: ubuntu-latest
+    steps:
+      - uses: mheap/github-action-required-labels@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          mode: maximum
+          count: 1
+          labels: "version:patch, version:minor, version:major"
+  check-blocking-label:
+    name: No blocking labels
+    runs-on: ubuntu-latest
+    steps:
+      - uses: mheap/github-action-required-labels@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          mode: maximum
+          count: 0
+          labels: "duplicate, invalid, wontfix"
+  check-category-label:
+    name: Is category label set?
+    runs-on: ubuntu-latest
+    steps:
+      - uses: mheap/github-action-required-labels@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          mode: minimum
+          count: 1
+          labels: "breaking, enhancement, removal, bug, performance, testing, ci, documentation, refactoring, style, dependencies, build"
