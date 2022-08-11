@@ -1,0 +1,14 @@
+{
+  "_output_dir": "/home/jf/Work/Lacewing",
+  "_template": "gh:cjolowicz/cookiecutter-hypermodern-python",
+  "author": "Josh Finch",
+  "copyright_year": "2022",
+  "development_status": "Development Status :: 1 - Planning",
+  "email": "me@joshfinch.com",
+  "friendly_name": "Terrafilter",
+  "github_user": "openfinch",
+  "license": "MIT",
+  "package_name": "terrafilter",
+  "project_name": "terrafilter",
+  "version": "0.0.0"
+}
