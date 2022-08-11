@@ -1,7 +1,7 @@
 exclude-labels:
-  - 'skip-changelog'
+  - "skip-changelog"
 exclude-contributors:
-  - 'dependabot'
+  - "dependabot"
 categories:
   - title: ":boom: Breaking Changes"
     label: "breaking"
@@ -30,15 +30,15 @@ categories:
 version-resolver:
   major:
     labels:
-      - 'version:major'
+      - "version:major"
   minor:
     labels:
-      - 'version:minor'
+      - "version:minor"
   patch:
     labels:
-      - 'version:patch'
+      - "version:patch"
   default: patch
-change-template: '- $TITLE #$NUMBER (@$AUTHOR)'
+change-template: "- $TITLE #$NUMBER (@$AUTHOR)"
 change-title-escapes: '\<*_&' #
 template: |
   ## Changes
