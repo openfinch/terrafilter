@@ -1,3 +1,7 @@
+exclude-labels:
+  - "skip-changelog"
+exclude-contributors:
+  - "dependabot"
 categories:
   - title: ":boom: Breaking Changes"
     label: "breaking"
@@ -23,6 +27,19 @@ categories:
     labels:
       - "dependencies"
       - "build"
+version-resolver:
+  major:
+    labels:
+      - "version:major"
+  minor:
+    labels:
+      - "version:minor"
+  patch:
+    labels:
+      - "version:patch"
+  default: patch
+change-template: "- $TITLE #$NUMBER (@$AUTHOR)"
+change-title-escapes: '\<*_&' #
 template: |
   ## Changes
 
