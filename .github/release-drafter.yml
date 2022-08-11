@@ -2,7 +2,6 @@ exclude-labels:
   - 'skip-changelog'
 exclude-contributors:
   - 'dependabot'
-
 categories:
   - title: ":boom: Breaking Changes"
     label: "breaking"

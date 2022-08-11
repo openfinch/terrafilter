@@ -64,3 +64,15 @@
 - name: wontfix
   description: This will not be worked on
   color: ffffff
+- name: version:patch
+  description: Patch release
+  color: "00ff00"
+- name: version:minor
+  description: Minor release
+  color: "00ff00"
+- name: version:major
+  description: Major release
+  color: "00ff00"
+- name: skip-changelog
+  description: This issue or pull request is not relevant for the changelog
+  color: "ffffff"
